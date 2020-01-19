@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script>
+	    function changeStr(){
+		 var str=document.getElementById("t1").value;
+		 var fnd=document.getElementById("t2").value;
+		    var newstr='';
+		   var word=str.split(" ");
+		   for(var i=0;i<word.length;i++){
+		       var s=word[i];
+			 if(word[i]==fnd){
+			 newstr=newstr+s.toUpperCase()+" "; 
+			 }else{
+			  newstr=newstr+s+" ";
+			  }
+		   }
+		    document.getElementById("t3").value=newstr;
+		}
+	</script>
+  </head>
+ <body>
+   Enter any sentence<input type="text" id="t1"/></br></br>
+   Find sentence<input type="text" id="t2"/></br></br>
+   Result<input type="text" id="t3"/></br></br>
+   <input type="button" value="Apply" onClick="changeStr()"/>
+ </body> 
+</html>

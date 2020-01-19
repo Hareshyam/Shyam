@@ -1,0 +1,21 @@
+<html>
+ <body>
+   <script>
+      var n,f=1,sum=0,r,t,i;
+	  n=prompt(parseInt('Enter The Number:',''));
+          t=n;
+	    while(n>0)
+		{
+		 r=n%10;
+		 n=parseInt(n/10);
+		 for(i=r;i>=1;i--)
+		  {
+		    f=f*i;
+		  }
+		  sum=sum+f;
+		}
+		  
+		   document.write(sum);
+   </script>
+ </body>
+</html>   

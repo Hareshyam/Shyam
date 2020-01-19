@@ -1,0 +1,117 @@
+<html>
+   <head>
+     <style>
+	     #slide-box{
+		  margin:auto;
+		  border:3px solid black;
+		  height:200px;
+		  width:600px;
+		  position:relative;
+		 }
+		 
+		  .slide{
+		  height:100%;
+		  width:100%;
+		  border:1px solid red;
+		  display:inline-block;
+		  position:absolute;
+		  text-align:center;
+		  color:white;
+		  font-size:24px; 
+		 }
+		 
+		 #btn1,#btn2{
+		  height:50px;
+		  width:100px;
+		  color:#FFFFFF;
+		  font-size:26px;
+		 }
+		 
+		 #btn1{
+		  outline:none;
+		  border-radius:10px;
+		  margin-left:650px;
+		  background:red;
+		  cursor:pointer; 
+		 }
+		 
+		 #btn2{
+		  outline:none;
+		  border-radius:10px;
+		  background:green;
+		  cursor:pointer;  
+		 }
+		 
+		 input[type="radio"]{
+		  height:20px;
+		  width:30px; 
+		  cursor:pointer;
+		 }
+		 
+		 
+		 p{
+	       text-align:center;
+		   font-size:36px;
+		   text-decoration:underline;
+		   color:#000033;	 
+		 }
+	 </style>
+	 
+	  <script>
+		    var slidNo=0;
+		  var slid=document.getElementsByClassName("slide");
+		  function slider(){
+		        for(var i=0;i<slid.length;i++){
+				  slid[i].style.display="none";
+				}
+				  slid[slidNo].style.display="block";
+				    slidNo++;
+					if(slidNo==5)
+					  slidNo=0;  
+					
+		 }
+	  </script>
+   </head>
+  <body>
+    <p>Some Quiz Questions!!!!</p>
+      <div id="slide-box">
+	    <span class="slide" style="background:black;">
+		  What numaric values are used for the font-weight property?<br/>
+		  <input type="radio"/>1000-9000.
+		  <input type="radio"/>1-10.
+		  <input type="radio"/>10-90.
+		  <input type="radio"/>100-900.
+		</span>
+		<span class="slide" style="background:red;">
+		  How many types of selector in css?<br/>
+		  <input type="radio"/>3
+		  <input type="radio"/>5
+		  <input type="radio"/>2
+		  <input type="radio"/>4
+		</span>
+		<span class="slide" style="background:green;">
+		   How many way of css?<br/>
+		  <input type="radio"/>2
+		  <input type="radio"/>4
+		  <input type="radio"/>3
+		  <input type="radio"/>1
+		</span>
+		<span class="slide" style="background:skyblue;">
+		  Why use css?<br/>
+		  <input type="radio"/>the web page's brouser independent.
+		  <input type="radio"/>unique web page.
+		  <input type="radio"/>the saparation of style and content.
+		  <input type="radio"/>responsive web page.
+		</span>
+		<span class="slide" style="background:blue;">
+		  Which css property is used for boldind the text?<br/>
+		  <input type="radio"/>font-size
+		  <input type="radio"/>font-variant.
+		  <input type="radio"/>font-weight.
+		  <input type="radio"/>font-style.
+		</span>
+	 </div> 
+	 <button id="btn1">cencle</button>
+	 <button id="btn2" onClick="slider()">next</button>
+  </body> 
+</html>
